@@ -3,7 +3,6 @@ import 'package:ecommerce_app/common/widgets/custom_shapes/containers/curved_edg
 import 'package:ecommerce_app/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 
-
 class TPrimaryHeaderContainer extends StatelessWidget {
   const TPrimaryHeaderContainer({
     super.key,
@@ -17,12 +16,15 @@ class TPrimaryHeaderContainer extends StatelessWidget {
       child: Container(
         color: TColors.primary,
         padding: const EdgeInsets.all(0),
-        child: const SizedBox(
+        child: SizedBox(
           height: 300,
           child: Stack(
             children: [
-              Positioned(top: -150, right: -250, child: TCirculerContainer()),
-              Positioned(top: 100, right: -250, child: TCirculerContainer()),
+              const Positioned(
+                  top: -150, right: -250, child: TCirculerContainer()),
+              const Positioned(
+                  top: 100, right: -250, child: TCirculerContainer()),
+              Positioned(child: child)
             ],
           ),
         ),

@@ -16,7 +16,7 @@ class TText {
 
   // --Home
   static const String homeAppbarTitle = "Good day for shopping";
-  static const String homeAppbarSubTitle = "Sam Store";
+  static const String homeAppbarSubTitle = "Samiullah Kalhoro";
 
   // Authentication Form Text
 
