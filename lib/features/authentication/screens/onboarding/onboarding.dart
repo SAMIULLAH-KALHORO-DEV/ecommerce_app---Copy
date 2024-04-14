@@ -1,5 +1,5 @@
 import 'package:ecommerce_app/features/authentication/controllers/onboarding/onboarding_controller.dart';
-import 'package:ecommerce_app/features/authentication/screens/onboarding/widgets/onBoarding_next_button..dart';
+import 'package:ecommerce_app/features/authentication/screens/onboarding/widgets/onboarding_next_button..dart';
 import 'package:ecommerce_app/features/authentication/screens/onboarding/widgets/onboarding_dot_navigation.dart';
 import 'package:ecommerce_app/features/authentication/screens/onboarding/widgets/onboarding_page.dart';
 import 'package:ecommerce_app/features/authentication/screens/onboarding/widgets/onboarding_skip.dart';

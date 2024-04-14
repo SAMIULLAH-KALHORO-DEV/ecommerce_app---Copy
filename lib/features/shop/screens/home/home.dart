@@ -1,5 +1,7 @@
 import 'package:ecommerce_app/common/widgets/custom_shapes/containers/circuler_container.dart';
+import 'package:ecommerce_app/common/widgets/custom_shapes/containers/curved_edges/curved_edge_widget.dart';
 import 'package:ecommerce_app/common/widgets/custom_shapes/containers/curved_edges/curved_edges.dart';
+import 'package:ecommerce_app/common/widgets/custom_shapes/containers/primary_heaader_container.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_app/utils/constants/colors.dart';
 
@@ -8,29 +10,16 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(children: [
-          
-           ClipPath(
-            clipper: TCustomCurvedEdges(),
-             child: Container(
-              color: TColors.primary,
-              padding: const EdgeInsets.all(0),
-              child: const SizedBox(
-                height: 300,
-                child: Stack(
-                  children: [
-                    Positioned(
-                        top: -150, right: -250, child: TCirculerContainer()),
-                    Positioned(
-                        top: 100, right: -250, child: TCirculerContainer()),
-                  ],
-                ),
-              ),
-                       ),
-           ),
-        
-      ]),
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            TPrimaryHeaderContainer(
+              child: Container(),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
