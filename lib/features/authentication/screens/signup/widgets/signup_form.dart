@@ -68,7 +68,7 @@ class TSignupForm extends StatelessWidget {
                 suffixIcon: Icon(Iconsax.eye_slash),
                 prefixIcon: Icon(Iconsax.password_check))),
         // Terms and conditions checkout
-        const Term_condition(),
+        const TermCondition(),
         const SizedBox(height: TSizes.spaceBtwSections),
         //Sign Up Button
         SizedBox(

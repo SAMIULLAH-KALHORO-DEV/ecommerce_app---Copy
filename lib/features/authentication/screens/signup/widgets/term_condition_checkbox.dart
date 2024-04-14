@@ -4,8 +4,8 @@ import 'package:ecommerce_app/utils/constants/text_strings.dart';
 import 'package:ecommerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
-class Term_condition extends StatelessWidget {
-  const Term_condition({
+class TermCondition extends StatelessWidget {
+  const TermCondition({
     super.key,
   });
 
