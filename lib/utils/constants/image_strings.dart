@@ -22,4 +22,16 @@ class TImages {
   // Animations
   static const String deliveredEmailIllustration =
       "assets/images/animations/sammy-line-man-receives-a-mail.png";
+
+// Category Icons
+
+  static const String superIcon= "assets/icons/catogories/icons8-bowling-64.png";
+  static const String clothIcon= "assets/icons/catogories/icons8-dummy-50.png";
+  static const String shoeIcon= "assets/icons/catogories/icons8-shoes-50.png";
+  static const String cosmeticsIcon= "assets/icons/catogories/icons8-cosmetics-50.png";
+  static const String animalIcon = "assets/icons/catogories/icons8-dog-heart-64.png";
+  static const String toyIcon= "assets/icons/catogories/icons8-wooden-toy-car-64.png";
+  static const String funitureIcon= "assets/icons/catogories/icons8-dining-chair-64.png";
+  static const String jeweleryIcon= "assets/icons/catogories/icons8-sparkling-diamond-50.png";
+  static const String electronicsIcon= "assets/icons/catogories/icons8-smartphone-64.png";
 }
