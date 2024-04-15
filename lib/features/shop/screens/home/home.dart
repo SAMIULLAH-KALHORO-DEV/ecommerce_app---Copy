@@ -51,11 +51,11 @@ class Home extends StatelessWidget {
                               Container(
                                 width: 56,
                                 height: 56,
-                                padding: EdgeInsets.all(TSizes.sm),
+                                padding: const EdgeInsets.all(TSizes.sm),
                                 decoration: BoxDecoration(
                                     color: TColors.white,
                                     borderRadius: BorderRadius.circular(56)),
-                                child: Center(
+                                child:const  Center(
                                     child: Image(
                                   image: AssetImage(TImages.shoeIcon),
                                   fit: BoxFit.cover,
