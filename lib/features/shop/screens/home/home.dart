@@ -2,8 +2,8 @@ import 'package:ecommerce_app/common/widgets/custom_shapes/containers/primary_he
 import 'package:ecommerce_app/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:ecommerce_app/common/widgets/texts/section_heading.dart';
 import 'package:ecommerce_app/features/shop/screens/home/widgets/home_appbar.dart';
+import 'package:ecommerce_app/features/shop/screens/home/widgets/home_catogory.dart';
 import 'package:ecommerce_app/utils/constants/colors.dart';
-import 'package:ecommerce_app/utils/constants/image_strings.dart';
 import 'package:ecommerce_app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
@@ -12,60 +12,34 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SingleChildScrollView(
         child: Column(
           // Header
           children: [
             TPrimaryHeaderContainer(
-              child: Column(
+              child:  Column(
                 children: [
                   //
                   //App bar
-                  const THomeAppBar(),
-                  const SizedBox(height: TSizes.spaceBtwSections),
+                  THomeAppBar(),
+                  SizedBox(height: TSizes.spaceBtwSections / 3),
                   // Search Bar
-                  const TSearchContainer(
+                  TSearchContainer(
                     text: 'Search in Store',
                   ),
-                  const SizedBox(height: TSizes.spaceBtwSections),
+                  SizedBox(height: TSizes.spaceBtwSections),
 
                   // heading Catogories
-                  const TSectionHeading(
+                  TSectionHeading(
                     title: 'Popular Catogories',
                     showActionButton: false,
+                    textColor: TColors.white,
                   ),
-                  const SizedBox(height: TSizes.spaceBtwItems),
+                  SizedBox(height: TSizes.spaceBtwItems),
 
                   // Catogories
-                  SizedBox(
-                    height: 80,
-                    child: ListView.builder(
-                        shrinkWrap: true,
-                        itemCount: 6,
-                        scrollDirection: Axis.horizontal,
-                        itemBuilder: (_, index) {
-                          return Column(
-                            children: [
-                              // Circuler Icon
-                              Container(
-                                width: 56,
-                                height: 56,
-                                padding: const EdgeInsets.all(TSizes.sm),
-                                decoration: BoxDecoration(
-                                    color: TColors.white,
-                                    borderRadius: BorderRadius.circular(56)),
-                                child:const  Center(
-                                    child: Image(
-                                  image: AssetImage(TImages.shoeIcon),
-                                  fit: BoxFit.cover,
-                                  color: TColors.dark,
-                                )),
-                              )
-                            ],
-                          );
-                        }),
-                  )
+                  THomeCatogories()
                 ],
               ),
             ),
