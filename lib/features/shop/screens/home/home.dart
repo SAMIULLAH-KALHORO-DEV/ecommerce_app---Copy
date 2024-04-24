@@ -1,24 +1,30 @@
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:ecommerce_app/common/widgets/custom_shapes/containers/circuler_container.dart';
 import 'package:ecommerce_app/common/widgets/custom_shapes/containers/primary_heaader_container.dart';
 import 'package:ecommerce_app/common/widgets/custom_shapes/containers/search_container.dart';
+import 'package:ecommerce_app/common/widgets/images/t_rounded_images.dart';
+import 'package:ecommerce_app/common/widgets/images/t_rounded_images.dart';
 import 'package:ecommerce_app/common/widgets/texts/section_heading.dart';
 import 'package:ecommerce_app/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:ecommerce_app/features/shop/screens/home/widgets/home_catogory.dart';
 import 'package:ecommerce_app/utils/constants/colors.dart';
+import 'package:ecommerce_app/utils/constants/image_strings.dart';
 import 'package:ecommerce_app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           // Header
           children: [
-            TPrimaryHeaderContainer(
-              child:  Column(
+            const TPrimaryHeaderContainer(
+              child: Column(
                 children: [
                   //
                   //App bar
@@ -43,6 +49,29 @@ class Home extends StatelessWidget {
                 ],
               ),
             ),
+            // body part
+            Padding(
+                padding: const EdgeInsets.all(TSizes.defaultSpace),
+                child: Column(
+                  children: [
+                    CarouselSlider(
+                      options: CarouselOptions(
+                        viewportFraction: 1,
+                      ),
+                      items: const [
+                        TRoundedImage(imageUrl: TImages.promoBanner3),
+                        TRoundedImage(imageUrl: TImages.promoBanner2),
+                        TRoundedImage(imageUrl: TImages.promoBanner1),
+                      ],
+                    ),
+                    const SizedBox(height: TSizes.spaceBtwItems),
+                    const TCirculerContainer(
+                      width: 1200,
+                      height: 20,
+                      backgroundColor: Colors.green,
+                    )
+                  ],
+                ))
           ],
         ),
       ),

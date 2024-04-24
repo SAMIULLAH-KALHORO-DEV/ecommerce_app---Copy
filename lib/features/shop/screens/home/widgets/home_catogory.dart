@@ -2,7 +2,6 @@ import 'package:ecommerce_app/common/widgets/image_text_widget/vertical_image_te
 import 'package:ecommerce_app/utils/constants/image_strings.dart';
 import 'package:flutter/material.dart';
 
-
 class THomeCatogories extends StatelessWidget {
   const THomeCatogories({
     super.key,
@@ -18,7 +17,7 @@ class THomeCatogories extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           itemBuilder: (_, index) {
             return TVerticalImageText(
-              image: TImages.shoeIcon,
+              image: TImages.cosmeticsIcon,
               title: 'shoes',
               onTap: () {},
             );
