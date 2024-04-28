@@ -3,7 +3,6 @@ import 'package:ecommerce_app/common/widgets/custom_shapes/containers/circuler_c
 import 'package:ecommerce_app/common/widgets/custom_shapes/containers/primary_heaader_container.dart';
 import 'package:ecommerce_app/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:ecommerce_app/common/widgets/images/t_rounded_images.dart';
-import 'package:ecommerce_app/common/widgets/images/t_rounded_images.dart';
 import 'package:ecommerce_app/common/widgets/texts/section_heading.dart';
 import 'package:ecommerce_app/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:ecommerce_app/features/shop/screens/home/widgets/home_catogory.dart';
@@ -65,10 +64,16 @@ class Home extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: TSizes.spaceBtwItems),
-                    const TCirculerContainer(
-                      width: 1200,
-                      height: 20,
-                      backgroundColor: Colors.green,
+                    Row(
+                      children: [
+                        for (int i = 0; i < 3; i++)
+                          TCirculerContainer(
+                            height: 4,
+                            width: 20,
+                            margin: EdgeInsets.only(right: 10),
+                            backgroundColor: Colors.green,
+                          ),
+                      ],
                     )
                   ],
                 ))
